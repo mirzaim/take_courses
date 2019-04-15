@@ -1,37 +1,56 @@
 package com.university;
 
+import java.util.LinkedList;
+
 public class Course {
+    private String id;
+    private String name;
+    private Department department;
+    private Professor professor;
+    private int credit;
+    private LinkedList<Student> students;
 
-    public Course(String ID, String name, Department department, Professor professor, int credit) {
 
+    public Course(String id, String name, Department department, Professor professor, int credit) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+        this.professor = professor;
+        this.credit = credit;
+
+        students = new LinkedList<>();
     }
 
-    public String getID(){
-        return null;
-    }
-
-    public Department getDepartment(){
-        return null;
+    public String getID() {
+        return id;
     }
 
     public String getName() {
-        return null;
+        return name;
     }
 
-    public Student[] getStudents() {
-        return null;
+    public Department getDepartment() {
+        return department;
     }
 
     public Professor getProfessor() {
-        return null;
+        return professor;
     }
 
     public int getCredit() {
-        return 0;
+        return credit;
     }
 
-    public void enrollStudent(Student student){
+    public void enrollStudent(Student student) {
+        try {
+            if (student.getDepartment().equals(department))
+                students.add(student);
+        } catch (Exception e) {
+        }
+    }
 
+    public Student[] getStudents() {
+        return students.toArray(new Student[0]);
     }
 
 }
