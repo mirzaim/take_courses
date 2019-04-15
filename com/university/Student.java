@@ -22,15 +22,15 @@ public class Student {
     }
 
     public String getID() {
-        return null;
+        return id;
     }
 
     public String getMajor() {
-        return null;
+        return major;
     }
 
     public Department getDepartment() {
-        return null;
+        return department;
     }
 
     public Course[] getCourses() {
@@ -38,6 +38,7 @@ public class Student {
     }
 
     public void addCourse(Course course) {
-
+        if (course != null)
+            courses.add(course);
     }
 }
