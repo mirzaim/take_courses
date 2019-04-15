@@ -2,16 +2,13 @@ package test;
 
 import com.university.Department;
 import com.university.Student;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.*;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
-public class StudnetTest {
+public class StudentTest {
     static Student student;
     static Department department;
 
@@ -27,7 +24,7 @@ public class StudnetTest {
     }
 
     @Test
-    public void testStudenGetCourses(){
+    public void testStudentGetCourses(){
         assertNotNull(student.getCourses());
         assertEquals(0, student.getCourses().length);
     }
