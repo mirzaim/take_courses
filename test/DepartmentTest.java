@@ -27,7 +27,7 @@ public class DepartmentTest {
         mathDepartment = new Department("Math");
 
         kalbasi = new Professor(ceDepartment, "Dr.Kalbasi");
-        khosravi = new Professor(ceDepartment, "Dr.Khosravi");
+        khosravi = new Professor(mathDepartment, "Dr.Khosravi");
         apCourse = new Course("1", "AP", ceDepartment, kalbasi, 3);
         mCourse = new Course("2", "math", mathDepartment, khosravi, 3);
 
