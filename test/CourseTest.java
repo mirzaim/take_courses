@@ -6,39 +6,44 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class CourseTest {
     static Course course;
     static Department ceDepartment;
     static Professor professor;
+    static Department mathDepartment;
 
     @BeforeAll
     public static void createCourse() {
         professor = new Professor(ceDepartment, "Samiei");
         ceDepartment = new Department("Computer and IT Eng");
-        course = new Course("1", "AP", ceDepartment, professor, 5);
+        course = new Course("1", "AP", ceDepartment, professor, 3);
+        mathDepartment = new Department("Math");
     }
 
     @Test
     public void testCourseGetId() {
+        assertNotNull(course.getID());
         assertEquals("1", course.getID());
     }
 
     @Test
     public void testCourseGetDepartment() {
+        assertNotNull(course.getDepartment());
         assertEquals(ceDepartment, course.getDepartment());
     }
 
     @Test
     public void testCourseGetName() {
+        assertNotNull(course.getName());
         assertEquals("AP", course.getName());
     }
 
     @Test
     public void testCourseGetProfessor() {
+        assertNotNull(course.getProfessor());
         assertEquals(professor, course.getProfessor());
     }
 
