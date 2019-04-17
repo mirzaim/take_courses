@@ -1,49 +1,55 @@
 package com.university;
 
 public class Department {
+    private String name;
 
     public Department(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void addStudent(Student student) {
 
     }
 
-    public String getName(){
+    public Student[] getStudents() {
         return null;
     }
 
-    public void addStudent(Student student){
+    public void removeStudent(Student student) {
 
     }
 
-    public Student[] getStudents(){
+    public void addCourse(Course course) {
+
+    }
+
+    public Course[] getCourses() {
         return null;
     }
 
-    public void removeStudent(Student student){
+    public void removeCourse(Course course) {
 
     }
 
-    public void addCourse(Course course){
+    public void addProfessor(Professor student) {
 
     }
 
-    public Course[] getCourses(){
+    public Professor[] getProfessors() {
         return null;
     }
 
-    public void removeCourse(Course course){
+    public void removeProfessor(Professor professor) {
 
     }
 
-    public void addProfessor(Professor student){
-
+    @Override
+    public boolean equals(Object obj) {
+        Department department = (Department) obj;
+        return department.getName().equals(this.getName());
     }
-
-    public Professor[] getProfessors(){
-        return null;
-    }
-
-    public void removeProfessor(Professor professor){
-
-    }
-
 }
