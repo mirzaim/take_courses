@@ -49,6 +49,10 @@ public class Department {
 
     @Override
     public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || this.getClass() != obj.getClass())
+            return false;
         Department department = (Department) obj;
         return department.getName().equals(this.getName());
     }
