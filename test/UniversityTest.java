@@ -35,7 +35,7 @@ public class UniversityTest {
         university.addDepartment(ce);
         university.addDepartment(cs);
 
-        assertEquals(departments.toArray(new Department[0]), university.getDepartments());
+        assertArrayEquals(departments.toArray(new Department[0]), university.getDepartments());
     }
 
     @Test
@@ -57,7 +57,7 @@ public class UniversityTest {
 
         university.addDepartment(ce);
 
-        assertEquals(departments.toArray(new Department[0]), university.getDepartments());
+        assertArrayEquals(departments.toArray(new Department[0]), university.getDepartments());
         assertNotNull(university.getDepartments());
 
     }
