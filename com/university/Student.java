@@ -41,4 +41,14 @@ public class Student {
         if (course != null)
             courses.add(course);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || this.getClass() != obj.getClass())
+            return false;
+        Student student = (Student) obj;
+        return student.getID().equals(this.getID());
+    }
 }
