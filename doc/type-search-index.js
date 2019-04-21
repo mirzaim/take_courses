@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.university","l":"Course"},{"p":"test","l":"CourseTest"},{"p":"com.university","l":"Department"},{"p":"test","l":"DepartmentTest"},{"p":"com.university","l":"Professor"},{"p":"test","l":"ProfessorTest"},{"p":"com.university","l":"Student"},{"p":"test","l":"StudentTest"},{"p":"com.university","l":"University"},{"p":"test","l":"UniversityTest"}]
